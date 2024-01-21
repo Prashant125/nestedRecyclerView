@@ -8,14 +8,15 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nestedrecyclerview.R
+import com.example.nestedrecyclerview.model.ItemData
 
-class ChildAdapter : ListAdapter<String, ChildAdapter.ChildViewHolder>(DiffCallback) {
+class ChildAdapter : ListAdapter<ItemData.ChildItem, ChildAdapter.ChildViewHolder>(DiffCallback) {
 
-    object DiffCallback : DiffUtil.ItemCallback<String>() {
-        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean =
+    object DiffCallback : DiffUtil.ItemCallback<ItemData.ChildItem>() {
+        override fun areItemsTheSame(oldItem: ItemData.ChildItem, newItem: ItemData.ChildItem): Boolean =
             oldItem == newItem
 
-        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean =
+        override fun areContentsTheSame(oldItem: ItemData.ChildItem, newItem: ItemData.ChildItem): Boolean =
             oldItem == newItem
     }
 
@@ -27,10 +28,14 @@ class ChildAdapter : ListAdapter<String, ChildAdapter.ChildViewHolder>(DiffCallb
 
     override fun onBindViewHolder(holder: ChildViewHolder, position: Int) {
         val childData = getItem(position)
-        holder.nameTextView.text = childData
+
+        // Bind data
+        holder.textView1.text = childData.name
+        holder.textView2.text = childData.nickName
     }
 
     inner class ChildViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
+        val textView1: TextView = itemView.findViewById(R.id.textView1)
+        val textView2: TextView = itemView.findViewById(R.id.textView2)
     }
 }

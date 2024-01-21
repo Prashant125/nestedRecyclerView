@@ -30,31 +30,75 @@ class MainActivity : AppCompatActivity() {
 
     private fun getDummyData(): List<ItemData> {
         return listOf(
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 1", listOf("Child 1", "Child 2","Child 2","Child 2","Child 2","Child 2","Child 2")),
-            ItemData("Parent 2", listOf("Child 3", "Child 4")),
-            ItemData("Parent 3", listOf("Child 5", "Child 6"))
+            ItemData("Parent 1", listOf(
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 1", "Nick 1"),
+                ItemData.ChildItem("Child 2", "Nick 2")
+            )),
+            ItemData("Parent 2", listOf(
+                ItemData.ChildItem("Child 3", "Nick 3"),
+                ItemData.ChildItem("Child 4", "Nick 4")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 5", "Nick 7"),
+                ItemData.ChildItem("Child 6", "Nick 8")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 9"),
+                ItemData.ChildItem("Child 6", "Nick 10")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 11"),
+                ItemData.ChildItem("Child 6", "Nick 12")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 13"),
+                ItemData.ChildItem("Child 6", "Nick 14")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            )),
+            ItemData("Parent 3", listOf(
+                ItemData.ChildItem("Child 5", "Nick 5"),
+                ItemData.ChildItem("Child 6", "Nick 6")
+            ))
             // Add more items as needed
         )
     }
+
 }
